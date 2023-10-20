@@ -1,0 +1,68 @@
+conky.config = {
+    alignment = 'top_right',
+    background = false,
+    border_width = 2,
+    cpu_avg_samples = 2,
+    default_color = 'darkblue',
+    default_outline_color = 'white',
+    default_shade_color = 'white',
+    double_buffer = true,
+    draw_borders = false,
+    draw_graph_borders = false,
+    draw_outline = false,
+    draw_shades = false,
+    extra_newline = false,
+    font = '123:size=8',
+    gap_x = 10,
+    gap_y = 40,
+    minimum_height = 5,
+    minimum_width = 352,
+    net_avg_samples = 2,
+    no_buffers = true,
+    out_to_console = false,
+    out_to_ncurses = false,
+    out_to_stderr = false,
+    out_to_x = true,
+    own_window = true,
+    own_window_class = 'Conky',
+    own_window_type = 'desktop',
+    own_window_transparent = true,
+    own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+    own_window_colour = 000000,
+    own_window_argb_visual = true,
+    own_window_argb_value = 100,
+    show_graph_range = false,
+    show_graph_scale = false,
+    stippled_borders = 0,
+    update_interval = 1.0,
+    uppercase = false,
+    use_spacer = 'none',
+    use_xft = true,
+}
+
+conky.text = [[
+Kernel: $alignr${kernel}
+Hostname: $alignr$nodename
+Uptime: $alignr$uptime
+===========================================================
+${color blue}CPU:       ${alignc} ${freq}MHz / ${alignr}(${cpu cpu}%)
+${if_match ${cpu cpu} <= 33}${color cyan}${cpubar 4 cpu} ${else}${if_match ${cpu cpu} >= 66}${color blue}${cpubar 4 cpu} ${else}${color darkcyan}${cpubar 4 cpu} ${endif}${endif}
+${color blue}RAM: ${alignr}$mem / $memmax ($memperc%)
+${if_match ${memperc} <= 33}${color cyan}${membar 4} ${else}${if_match ${memperc} >= 66}${color blue}${membar 4} ${else}${color darkcyan}${membar 4} ${endif}${endif}
+${color darkblue}============================Storage==========================
+${color blue}Root: ${alignr}${fs_free_perc /}% / ${fs_free /} / ${fs_size /}
+${if_match ${fs_free_perc /} <= 33}${color blue}${fs_bar 4 /} ${else}${if_match ${fs_free_perc /} >= 66}${color cyan}${fs_bar 4 /} ${else}${color darkcyan}${fs_bar 4 /} ${endif}${endif}
+${color blue}Home: ${alignr}${fs_free_perc /home}% / ${fs_free /home} / ${fs_size /home}
+${if_match ${fs_free_perc /home} <= 33}${color darkblue}${fs_bar 4 /home} ${else}${if_match ${fs_free_perc /home} >= 66}${color cyan}${fs_bar 4 /home} ${else}${color darkcyan}${fs_bar 4 /home} ${endif}${endif}
+${color darkblue}
+============================Wired===========================
+Down ${downspeed eth0} k/s ${alignr}Up ${upspeed eth0} k/s
+Total ${totaldown eth0} ${alignr}Total ${totalup eth0}
+Local IP ${alignr}${addr eth0}
+============================WiFi============================
+Down ${downspeed wlan0} k/s ${alignr}Up ${upspeed wlan0} k/s
+Total ${totaldown wlan0} ${alignr}Total ${totalup wlan0}
+Local IP WiFi ${alignr}${addr wlan0}
+============================Time============================
+${font snap.se:pixelsize=26}${alignc}${time %H:%M}${font snap.se:size=8}
+]]

@@ -1,0 +1,114 @@
+conky.config = {
+    alignment = 'top_right',
+    background = false,
+    border_width = 1,
+    cpu_avg_samples = 2,
+    default_color = 'darkblue',
+    default_outline_color = 'white',
+    default_shade_color = 'white',
+    double_buffer = true,
+    desktop_name = All,
+    draw_borders = false,
+    draw_graph_borders = true,
+    draw_outline = false,
+    draw_shades = false,
+    extra_newline = false,
+    font = '123:size=8',
+    gap_x = 400,
+    gap_y = 40,
+    minimum_height = 5,
+    minimum_width = 5,
+    net_avg_samples = 2,
+    no_buffers = true,
+    out_to_console = false,
+    out_to_ncurses = false,
+    out_to_stderr = false,
+    out_to_x = true,
+    own_window = true,
+    own_window_class = 'Conky',
+    own_window_type = 'desktop',
+    own_window_transparent = true,
+    own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+    own_window_colour = 000000,
+    own_window_argb_visual = true,
+    own_window_argb_value = 100,
+    show_graph_range = false,
+    show_graph_scale = false,
+    stippled_borders = 0,
+    update_interval = 1.0,
+    uppercase = false,
+    use_spacer = 'none',
+    use_xft = true,
+}
+
+
+conky.text = [[
+=============osmosis===============
+Symbol                                         Current
+${hr 1}
+#============Main==================
+#######################
+${color blue}OSMO:   ${alignr}${color cyan}${execi 60 curl "https://api-osmosis.imperator.co/tokens/v2/OSMO" | jq -r '.[0].price' }
+${color darkblue}${hr 1}
+#######################
+${color blue}ATOM:   ${alignr}${color cyan}${execi 60 curl "https://api-osmosis.imperator.co/tokens/v2/ATOM" | jq -r '.[0].price'}
+${color darkblue}${hr 1}
+#######################
+${color blue}WBTC:   ${alignr}${color cyan}${execi 60 curl "https://api-osmosis.imperator.co/tokens/v2/WBTC" | jq -r '.[0].price'}
+${color darkblue}${hr 1}
+#######################
+${color blue}WETH:   ${alignr}${color cyan}${execi 60 curl "https://api-osmosis.imperator.co/tokens/v2/WETH" | jq -r '.[0].price'}
+${color darkblue}${hr 1}
+#######################
+${color blue}JUNO:   ${alignr}${color cyan}${execi 60 curl "https://api-osmosis.imperator.co/tokens/v2/JUNO" | jq -r '.[0].price'}
+${color darkblue}${hr 1}
+#######################
+${color blue}GRAV:   ${alignr}${color cyan}${execi 60 curl "https://api-osmosis.imperator.co/tokens/v2/GRAV" | jq -r '.[0].price'}
+${color darkblue}${hr 1}
+#######################
+${color blue}IRIS:   ${alignr}${color cyan}${execi 60 curl "https://api-osmosis.imperator.co/tokens/v2/IRIS" | jq -r '.[0].price'}
+${color darkblue}${hr 1}
+#######################
+${color blue}FET:   ${alignr}${color cyan}${execi 60 curl "https://api-osmosis.imperator.co/tokens/v2/FET" | jq -r '.[0].price'}
+${color darkblue}${hr 1}
+#######################
+${color blue}SCRT:   ${alignr}${color cyan}${execi 60 curl "https://api-osmosis.imperator.co/tokens/v2/SCRT" | jq -r '.[0].price'}
+${color darkblue}${hr 1}
+#######################
+${color blue}BLD:   ${alignr}${color cyan}${execi 60 curl "https://api-osmosis.imperator.co/tokens/v2/BLD" | jq -r '.[0].price'}
+${color darkblue}${hr 1}
+#######################
+${color blue}AXL:   ${alignr}${color cyan}${execi 60 curl "https://api-osmosis.imperator.co/tokens/v2/AXL" | jq -r '.[0].price'}
+${color darkblue}${hr 1}
+#######################
+${color blue}MARS:   ${alignr}${color cyan}${execi 60 curl "https://api-osmosis.imperator.co/tokens/v2/MARS" | jq -r '.[0].price'}
+${color darkblue}${hr 1}
+#######################
+${color blue}FLIX:   ${alignr}${color cyan}${execi 60 curl "https://api-osmosis.imperator.co/tokens/v2/FLIX" | jq -r '.[0].price'}
+${color darkblue}${hr 1}
+#######################
+${color blue}STARS:   ${alignr}${color cyan}${execi 60 curl "https://api-osmosis.imperator.co/tokens/v2/STARS" | jq -r '.[0].price'}
+${color darkblue}${hr 1}
+#######################
+${color blue}KUJI:   ${alignr}${color cyan}${execi 60 curl "https://api-osmosis.imperator.co/tokens/v2/KUJI" | jq -r '.[0].price'}
+${color darkblue}${hr 1}
+#######################
+${color blue}UMEE:   ${alignr}${color cyan}${execi 60 curl "https://api-osmosis.imperator.co/tokens/v2/UMEE" | jq -r '.[0].price'}
+${color darkblue}${hr 1}
+#######################
+${color blue}USTC:   ${alignr}${color cyan}${execi 60 curl "https://api-osmosis.imperator.co/tokens/v2/USTC" | jq -r '.[0].price'}
+${color darkblue}${hr 1}
+#######################
+${color blue}LUNC:   ${alignr}${color cyan}${execi 60 curl "https://api-osmosis.imperator.co/tokens/v2/LUNC" | jq -r '.[0].price'}
+${color darkblue}${hr 1}
+#######################
+${color blue}LUNA:   ${alignr}${color cyan}${execi 60 curl "https://api-osmosis.imperator.co/tokens/v2/LUNA" | jq -r '.[0].price'}
+${color darkblue}${hr 1}
+#######################
+${color blue}CRE:   ${alignr}${color cyan}${execi 60 curl "https://api-osmosis.imperator.co/tokens/v2/CRE" | jq -r '.[0].price'}
+${color darkblue}${hr 1}
+#######################
+${color blue}CMDX:   ${alignr}${color cyan}${execi 60 curl "https://api-osmosis.imperator.co/tokens/v2/CMDX" | jq -r '.[0].price'}
+${color darkblue}${hr 1}
+#######################
+]]

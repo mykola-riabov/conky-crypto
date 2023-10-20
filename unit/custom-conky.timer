@@ -1,0 +1,8 @@
+[Unit]
+Description=Start custom-conky
+
+[Timer]
+OnStartupSec= 10
+
+[Install]
+WantedBy=timers.target

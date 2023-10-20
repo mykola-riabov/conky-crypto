@@ -1,0 +1,14 @@
+[Unit]
+Description = conky custom service
+After = multi-user.target
+
+[Service]
+Type = forking
+ExecStart = /home/user/your/patch/conky-start.sh
+Restart = on-abort
+Environment = "DISPLAY=:0.0"
+StandardOutput=append:/home/user/.config/systemd/log/conky-custom.log
+StandardError=append:/home/user/.config/systemd/log/conky-custom.log
+
+[Install]
+WantedBy = timers.target
