@@ -1,0 +1,5 @@
+# Generated at runtime
+.config/
+
+# Local env (use systemd/conky-crypto.env.example)
+*.local

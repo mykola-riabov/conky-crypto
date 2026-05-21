@@ -1,0 +1,14 @@
+[Unit]
+Description=Conky crypto desktop widgets
+After=graphical-session.target
+PartOf=graphical-session.target
+
+[Service]
+Type=forking
+EnvironmentFile=-%h/.config/conky-crypto/env
+ExecStart=%h/.config/conky-crypto/run-conky.sh
+Restart=on-failure
+RestartSec=15
+
+[Install]
+WantedBy=graphical-session.target

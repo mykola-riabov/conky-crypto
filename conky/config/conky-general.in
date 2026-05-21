@@ -12,7 +12,7 @@ conky.config = {
     draw_outline = false,
     draw_shades = false,
     extra_newline = false,
-    font = '123:size=8',
+    font = 'DejaVu Sans:size=9',
     gap_x = 10,
     gap_y = 40,
     minimum_height = 5,
@@ -55,14 +55,11 @@ ${if_match ${fs_free_perc /} <= 33}${color blue}${fs_bar 4 /} ${else}${if_match 
 ${color blue}Home: ${alignr}${fs_free_perc /home}% / ${fs_free /home} / ${fs_size /home}
 ${if_match ${fs_free_perc /home} <= 33}${color darkblue}${fs_bar 4 /home} ${else}${if_match ${fs_free_perc /home} >= 66}${color cyan}${fs_bar 4 /home} ${else}${color darkcyan}${fs_bar 4 /home} ${endif}${endif}
 ${color darkblue}
-============================Wired===========================
-Down ${downspeed eth0} k/s ${alignr}Up ${upspeed eth0} k/s
-Total ${totaldown eth0} ${alignr}Total ${totalup eth0}
+============================Network========================
+Down ${downspeed eth0} ${alignr}Up ${upspeed eth0}
+Down ${downspeed wlan0} ${alignr}Up ${upspeed wlan0}
 Local IP ${alignr}${addr eth0}
-============================WiFi============================
-Down ${downspeed wlan0} k/s ${alignr}Up ${upspeed wlan0} k/s
-Total ${totaldown wlan0} ${alignr}Total ${totalup wlan0}
-Local IP WiFi ${alignr}${addr wlan0}
+WiFi IP ${alignr}${addr wlan0}
 ============================Time============================
-${font snap.se:pixelsize=26}${alignc}${time %H:%M}${font snap.se:size=8}
+${font DejaVu Sans:size=26}${alignc}${time %H:%M}${font DejaVu Sans:size=9}
 ]]

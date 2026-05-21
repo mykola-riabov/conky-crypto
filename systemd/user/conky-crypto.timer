@@ -1,0 +1,9 @@
+[Unit]
+Description=Delayed start for Conky crypto widgets
+
+[Timer]
+OnBootSec=30
+Unit=conky-crypto.service
+
+[Install]
+WantedBy=timers.target

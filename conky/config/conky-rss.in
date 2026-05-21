@@ -7,17 +7,16 @@ conky.config = {
     default_outline_color = 'white',
     default_shade_color = 'white',
     double_buffer = true,
-    desktop_name = All,
     draw_borders = false,
     draw_graph_borders = true,
     draw_outline = false,
     draw_shades = false,
     extra_newline = false,
-    font = '123:size=8',
+    font = 'DejaVu Sans:size=9',
     gap_x = 30,
     gap_y = 40,
     minimum_height = 5,
-    minimum_width = 5,
+    minimum_width = 320,
     net_avg_samples = 2,
     no_buffers = true,
     out_to_console = false,
@@ -35,30 +34,27 @@ conky.config = {
     show_graph_range = false,
     show_graph_scale = false,
     stippled_borders = 0,
-    update_interval = 1.0,
+    update_interval = 300,
     uppercase = false,
     use_spacer = 'none',
     use_xft = true,
 }
 
 conky.text = [[
-
- Coindesk
- ========
+${color darkblue} Coindesk
+${color blue} ========
  1. ${rss https://www.coindesk.com/arc/outboundfeeds/rss/ 30 item_title 0}
  2. ${rss https://www.coindesk.com/arc/outboundfeeds/rss/ 30 item_title 1}
  3. ${rss https://www.coindesk.com/arc/outboundfeeds/rss/ 30 item_title 2}
  4. ${rss https://www.coindesk.com/arc/outboundfeeds/rss/ 30 item_title 3}
  5. ${rss https://www.coindesk.com/arc/outboundfeeds/rss/ 30 item_title 4}
 ================================================================================
-
- Blockchain
- ==========
+${color darkblue} Blockchain.news
+${color blue} =================
  1. ${rss https://blockchain.news/RSS/ 30 item_title 0}
  2. ${rss https://blockchain.news/RSS/ 30 item_title 1}
  3. ${rss https://blockchain.news/RSS/ 30 item_title 2}
  4. ${rss https://blockchain.news/RSS/ 30 item_title 3}
  5. ${rss https://blockchain.news/RSS/ 30 item_title 4}
 ================================================================================
-
 ]]
